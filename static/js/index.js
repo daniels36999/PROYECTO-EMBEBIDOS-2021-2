@@ -137,7 +137,7 @@ function Exportar()
 {      
     var textToWrite = document.getElementById("historial").value;
     var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
-    var NombreGuardar = "myNewFile.txt";
+    var NombreGuardar = "Embebidos - Historial de Sensores.txt";
     var downloadLink = document.createElement("a");
 	
     downloadLink.download = NombreGuardar;
