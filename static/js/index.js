@@ -1,7 +1,6 @@
 //https://www.eclipse.org/paho/clients/js/
 //document.getElementById("sensor1").innerHTML="LED1 ENCENDIDO";
 
-
 //FUNCION DEL BOTON ENCENDER - 1
 function LED1_On() {
 	message = new Paho.MQTT.Message("LED1_ON");
@@ -129,7 +128,33 @@ function Histo2(){
 	  if(var1=="OO"){
 	  	document.getElementById("historial").innerHTML="---------------------------";	  
 	  }
-
-
   }
+
+//EXPORTAR
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+function Exportar()
+{      
+    var textToWrite = document.getElementById("historial").value;
+    var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+    var NombreGuardar = "myNewFile.txt";
+    var downloadLink = document.createElement("a");
+	
+    downloadLink.download = NombreGuardar;
+    downloadLink.innerHTML = "My Hidden Link";
+
+    window.URL = window.URL || window.webkitURL;
+    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+}
+ 
+function destroyClickedElement(event)
+{
+    document.body.removeChild(event.target);
+}
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
   
