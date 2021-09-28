@@ -115,13 +115,13 @@ function Histo2(){
 	sms=(message.payloadString);
 	  
 	VectorDatos=sms.split(";")  
+	Npalabras =VectorDatos.length;
 	document.getElementById("sensor1").innerHTML="Temperatura: "+VectorDatos[0];
 	document.getElementById("sensor2").innerHTML="Distancia: "+VectorDatos[1];
 	document.getElementById("sensor3").innerHTML="Tanque: "+VectorDatos[2];
-	VizualizarHistorial=VectorDatos[3];
 	  
-	  if(var1=="MM"){
-	  	document.getElementById("historial").innerHTML=VizualizarHistorial;
+	  if(Npalabras>=4&&var1=="MM"){
+	  	document.getElementById("historial").innerHTML=VectorDatos[3];
 	  }
 	  if(var1=="OO"){
 	  	document.getElementById("historial").innerHTML="Dispositivos Embebidos Historial.";
