@@ -116,8 +116,8 @@ function Histo2(){
 	  
 	VectorDatos=sms.split(";")  
 	document.getElementById("sensor1").innerHTML="Temperatura: "+VectorDatos[0];
-	document.getElementById("sensor2").innerHTML="Temperatura: "+VectorDatos[1];
-	document.getElementById("sensor3").innerHTML="Temperatura: "+VectorDatos[2];
+	document.getElementById("sensor2").innerHTML="Distancia: "+VectorDatos[1];
+	document.getElementById("sensor3").innerHTML="Tanque: "+VectorDatos[2];
 	  
 	  if(var1=="MM"){
 	  	document.getElementById("historial").innerHTML=VectorDatos[3];
