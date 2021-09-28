@@ -46,7 +46,7 @@ function LED3_Off(){
 	console.log("LED 3 APAGADO");
 }
 
-var1="hola";
+var1=" ";
 //FUNCION DEL BOTON MOSTRAR HISTORIAL
 function Histo1(){
 	message = new Paho.MQTT.Message("MOSTRAR_HISTORIAL");
@@ -115,8 +115,15 @@ function Histo2(){
 	sms=(message.payloadString);
 	  
 	VectorDatos=sms.split(";")  
-	 document.getElementById("sensor1").innerHTML="Temperatura: "+VectorDatos[0];
-	 document.getElementById("historial").innerHTML=VectorDatos[1];
+	document.getElementById("sensor1").innerHTML="Temperatura: "+VectorDatos[0];
+	  
+	  if(var1=="MM"){
+	  	document.getElementById("historial").innerHTML=VectorDatos[1];
+	  }
+	  if(var1=="OO"){
+	  	document.getElementById("historial").innerHTML="Dispositivos Embebidos Historial.";
+	  }
+	
 	  
 //	Dividir = sms.split(" ");
 //	Npalabras =Dividir.length;
