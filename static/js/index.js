@@ -113,21 +113,29 @@ function Histo2(){
     //console.log("onMessageArrived:"+message.payloadString);
 	  //document.getElementById("sensor").innerHTML=message.payloadString;
 	sms=(message.payloadString);
-	Dividir = sms.split(" ");
-	Npalabras =Dividir.length;
+	  
+	VectorDatos=sms.split(";")  
+	 document.getElementById("sensor1").innerHTML="Temperatura: "+VectorDatos[0];
+	 document.getElementById("historial").innerHTML=VectorDatos[1];
+	  
+//	Dividir = sms.split(" ");
+//	Npalabras =Dividir.length;
 
-	  if(sms=="Alta"){
-	  	document.getElementById("sensor1").innerHTML="Temperatura: "+sms;
-	  }
-	  if(sms=="Baja"){
-	  	document.getElementById("sensor1").innerHTML="Temperatura: "+sms;	  
-	  }
-	  if(Npalabras>=10){
-	  	document.getElementById("historial").innerHTML=sms;	  
-	  }
-	  if(var1=="OO"){
-	  	document.getElementById("historial").innerHTML="---------------------------";	  
-	  }
+//	  if(sms=="Alta"){
+//	  	document.getElementById("sensor1").innerHTML="Temperatura: "+sms;
+//	  }
+//	  if(sms=="Baja"){
+//	  	document.getElementById("sensor1").innerHTML="Temperatura: "+sms;	  
+//	  }
+//	  if(Npalabras>=10){
+//	  	document.getElementById("historial").innerHTML=sms;	  
+//	  }
+//	  if(var1=="OO"){
+//	  	document.getElementById("historial").innerHTML="---------------------------";	  
+//	  }
+	  
+	  
+	  
   }
 
 //EXPORTAR
