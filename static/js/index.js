@@ -135,7 +135,7 @@ function Histo2(){
 //----------------------------------------------------------------------------------
 function Exportar()
 {      
-    var textToWrite = document.getElementById("historial").value;
+    var textToWrite = document.getElementById("historial").innerHTML;
     var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
     var NombreGuardar = "Embebidos - Historial de Sensores.txt";
     var downloadLink = document.createElement("a");
