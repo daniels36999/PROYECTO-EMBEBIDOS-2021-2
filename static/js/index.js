@@ -116,9 +116,11 @@ function Histo2(){
 	  
 	VectorDatos=sms.split(";")  
 	document.getElementById("sensor1").innerHTML="Temperatura: "+VectorDatos[0];
+	document.getElementById("sensor2").innerHTML="Temperatura: "+VectorDatos[1];
+	document.getElementById("sensor3").innerHTML="Temperatura: "+VectorDatos[2];
 	  
 	  if(var1=="MM"){
-	  	document.getElementById("historial").innerHTML=VectorDatos[1];
+	  	document.getElementById("historial").innerHTML=VectorDatos[3];
 	  }
 	  if(var1=="OO"){
 	  	document.getElementById("historial").innerHTML="Dispositivos Embebidos Historial.";
