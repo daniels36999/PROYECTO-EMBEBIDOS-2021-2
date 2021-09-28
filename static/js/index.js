@@ -89,7 +89,7 @@ function Histo2(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("dyautibug.fie@unach.edu.ec/test1");
+    client.subscribe("dyautibug.fie@unach.edu.ec/test");
     message = new Paho.MQTT.Message("SE A CONECTADO A LA WEB EXITOSAMENTE");
     message.destinationName = "dyautibug.fie@unach.edu.ec/test1";
     client.send(message);
